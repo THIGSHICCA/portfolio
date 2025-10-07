@@ -19,7 +19,7 @@ export const About = () => {
       transition={{ delay: 0.175 }}
     >
       <SectionHeading heading="About Me" />
-      <div className="-mt-5 max-w-2xl text-center leading-7 space-y-4">
+      <div className="mt-5 max-w-2xl text-center leading-7 space-y-4">
         <p>
           Hi, I&apos;m Thigshicca Vigneswaramoorthy. I recently completed my
           Higher Diploma in Information Technology and am currently pursuing a
