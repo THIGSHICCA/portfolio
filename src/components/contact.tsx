@@ -21,7 +21,9 @@ export const Contact = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
+  } = useForm<TFormSchema>({
+    resolver: zodResolver(formSchema),
+  });
 
   const onSubmit = async (values: TFormSchema) => {
     const { data, error } = await sendEmailAction(values);
@@ -46,7 +48,7 @@ export const Contact = () => {
       viewport={{ once: true }}
     >
       {/* Background Glow */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 opacity-20 rounded-xl blur-3xl"></div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 opacity-20 rounded-xl blur-3xl" />
 
       <SectionHeading
         heading="Get In Touch"
@@ -88,12 +90,12 @@ export const Contact = () => {
             placeholder="hello@gmail.com"
             {...register('email')}
             className={cn(
-              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600',
+              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600',
               errors.email?.message && 'border-red-500'
             )}
           />
           {errors.email?.message && (
-            <p className="mt-1 text-sm text-red-500">{errors.email?.message}</p>
+            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
           )}
         </div>
 
@@ -113,13 +115,13 @@ export const Contact = () => {
             placeholder="Hello! What's up?"
             {...register('message')}
             className={cn(
-              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600 resize-none h-48',
+              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600 resize-none h-48',
               errors.message?.message && 'border-red-500'
             )}
           />
           {errors.message?.message && (
             <p className="mt-1 text-sm text-red-500">
-              {errors.message?.message}
+              {errors.message.message}
             </p>
           )}
         </div>

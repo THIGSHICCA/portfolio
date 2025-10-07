@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { useSectionInView } from '@/hooks/use-section-in-view';
-import { skillsData } from '@/lib/data';
-
 
 // Animation Variants
 const containerVariants = {
@@ -35,7 +33,7 @@ export const Intro = () => {
       className="relative my-10 flex scroll-mt-96 flex-col items-center gap-5 text-center sm:mt-28"
     >
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-rose-500 via-purple-500 to-blue-500 opacity-20 blur-3xl"></div>
+      <div className="absolute inset-0 -z-10 animate-gradient bg-gradient-to-br from-rose-500 via-purple-500 to-blue-500 opacity-20 blur-3xl" />
 
       <motion.div
         variants={containerVariants}
@@ -49,9 +47,9 @@ export const Intro = () => {
             href="#contact"
             className="flex items-center gap-3 rounded border px-3 py-1 hover:scale-105 transition-transform"
           >
-            <span className="relative flex size-2">
-              <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative flex size-2 rounded-full bg-green-400"></span>
+            <span className="relative flex h-4 w-4">
+              <span className="absolute inset-0 animate-ping rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative rounded-full bg-green-400 h-4 w-4"></span>
             </span>
             <span className="font-mono text-sm">Available for work!</span>
           </Link>
@@ -74,26 +72,23 @@ export const Intro = () => {
           variants={itemVariants}
           className="text-muted-foreground max-w-xl text-center"
         >
-          Aspiring Software Engineer | AI & ML enthusiast |{' '}
-          <span>
-            BSc(Hons) Computer Science & Software Engineering Undergraduate
-          </span>
+          Aspiring Software Engineer | AI & ML Enthusiast |{' '}
+          <span>BSc(Hons) Computer Science & Software Engineering Undergraduate</span>
         </motion.p>
 
         {/* Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-row gap-2 mt-4"
+          className="flex flex-row gap-2 mt-4 flex-wrap justify-center"
         >
-          <Button
-            asChild
-            size="lg"
-            className="hover:scale-105 transition-transform"
-          >
+          {/* Contact Button */}
+          <Button asChild size="lg" className="hover:scale-105 transition-transform">
             <Link href="#contact">
               Get in touch <Icons.arrowRight className="ml-2 size-4" />
             </Link>
           </Button>
+
+          {/* Download CV Button */}
           <Button
             variant="outline"
             size="lg"
@@ -104,6 +99,8 @@ export const Intro = () => {
               Download CV <Icons.download className="ml-2 size-4" />
             </a>
           </Button>
+
+          {/* Social Buttons */}
           <Button
             variant="outline"
             size="icon"
@@ -118,17 +115,14 @@ export const Intro = () => {
               <Icons.linkedin className="size-5" />
             </Link>
           </Button>
+
           <Button
             variant="outline"
             size="icon"
             className="hover:rotate-12 transition-transform"
             asChild
           >
-            <Link
-              href="https://github.com/THIGSHICCA"
-              aria-label="Github"
-              target="_blank"
-            >
+            <Link href="https://github.com/THIGSHICCA" aria-label="Github" target="_blank">
               <Icons.github className="size-5" />
             </Link>
           </Button>
