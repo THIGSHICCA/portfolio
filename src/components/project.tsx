@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
 import { projectsData } from '@/lib/data';
 
 type TProject = (typeof projectsData)[number];
@@ -13,18 +12,11 @@ type TProps = {
 };
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
+  initial: { opacity: 0, y: 100 },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.1 * index,
-      duration: 0.6,
-      ease: 'easeOut',
-    },
+    transition: { delay: 0.1 * index, duration: 0.6, ease: 'easeOut' },
   }),
 };
 
@@ -45,17 +37,19 @@ export const Project = ({ project, index }: TProps) => {
         <Image
           src={image}
           alt={title}
-          width={width || 600} // default width
-          height={height || 390} // default height
+          width={width || 600}
+          height={height || 390}
           className="rounded-lg object-contain transition-transform hover:scale-105"
         />
       </div>
 
       {/* Title */}
-      <h3 className="mt-3 text-xl font-medium text-gray-900 dark:text-white">{title}</h3>
+      <h3 className="mt-3 text-xl font-medium text-gray-900 dark:text-white">
+        {title}
+      </h3>
 
       {/* Description */}
-      <p className="text-muted-foreground mb-2 mt-1">{description}</p>
+      <p className="text-muted-foreground mt-1 mb-2">{description}</p>
 
       {/* Technologies */}
       <div className="flex flex-wrap gap-2 mt-2">

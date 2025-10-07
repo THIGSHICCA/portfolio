@@ -10,12 +10,7 @@ import { useSectionInView } from '@/hooks/use-section-in-view';
 // Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 };
 
 const itemVariants = {
@@ -47,9 +42,9 @@ export const Intro = () => {
             href="#contact"
             className="flex items-center gap-3 rounded border px-3 py-1 hover:scale-105 transition-transform"
           >
-            <span className="relative flex h-4 w-4">
-              <span className="absolute inset-0 animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative rounded-full bg-green-400 h-4 w-4"></span>
+            <span className="relative flex size-4">
+              <span className="absolute inset-0 animate-ping rounded-full bg-green-400 opacity-75" />
+              <span className="relative rounded-full bg-green-400 size-4" />
             </span>
             <span className="font-mono text-sm">Available for work!</span>
           </Link>
@@ -79,7 +74,7 @@ export const Intro = () => {
         {/* Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-row gap-2 mt-4 flex-wrap justify-center"
+          className="flex flex-wrap justify-center gap-2 mt-4"
         >
           {/* Contact Button */}
           <Button asChild size="lg" className="hover:scale-105 transition-transform">
@@ -92,37 +87,28 @@ export const Intro = () => {
           <Button
             variant="outline"
             size="lg"
-            className="hidden sm:flex hover:scale-105 transition-transform"
             asChild
+            className="hidden sm:flex hover:scale-105 transition-transform"
           >
             <a href="/Thigshicca_CV.pdf" download>
               Download CV <Icons.download className="ml-2 size-4" />
             </a>
           </Button>
 
-          {/* Social Buttons */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="hover:rotate-12 transition-transform"
-            asChild
-          >
+          {/* LinkedIn */}
+          <Button variant="outline" size="icon" asChild className="hover:rotate-12 transition-transform">
             <Link
               href="https://www.linkedin.com/in/thigshicca-vigneshwaramoorthy-a5aa7823a"
-              aria-label="Linkedin"
               target="_blank"
+              aria-label="LinkedIn"
             >
               <Icons.linkedin className="size-5" />
             </Link>
           </Button>
 
-          <Button
-            variant="outline"
-            size="icon"
-            className="hover:rotate-12 transition-transform"
-            asChild
-          >
-            <Link href="https://github.com/THIGSHICCA" aria-label="Github" target="_blank">
+          {/* GitHub */}
+          <Button variant="outline" size="icon" asChild className="hover:rotate-12 transition-transform">
+            <Link href="https://github.com/THIGSHICCA" target="_blank" aria-label="Github">
               <Icons.github className="size-5" />
             </Link>
           </Button>

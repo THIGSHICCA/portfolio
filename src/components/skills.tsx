@@ -1,24 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-
-import { Button } from '@/components/button';
-import { Icons } from '@/components/icons';
-import { useSectionInView } from '@/hooks/use-section-in-view';
 import { skillsData } from '@/lib/data';
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    x: 100, // start off 100px to the right
-  },
+  initial: { opacity: 0, x: 100 },
   animate: (index: number) => ({
     opacity: 1,
-    x: 0, // move to original position
-    transition: {
-      delay: 0.05 * index,
-    },
+    x: 0,
+    transition: { delay: 0.05 * index },
   }),
 };
 
