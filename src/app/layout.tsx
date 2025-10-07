@@ -1,7 +1,7 @@
-import '@/styles/globals.css';
-
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
+
+import '@/styles/globals.css';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -44,4 +44,4 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default RootLayout;  
+export default RootLayout;
