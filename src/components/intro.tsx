@@ -55,9 +55,13 @@ export const Intro = () => {
           variants={itemVariants}
           className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
         >
-          <span className="block">Hi, This is <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
- Thigshicca </span>{' '}
-. I&apos;m a</span>
+          <span className="block">
+            Hi, This is{' '}
+            <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
+              Thigshicca{' '}
+            </span>
+            . I&apos;m a
+          </span>
           <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
             Fullstack
           </span>{' '}
