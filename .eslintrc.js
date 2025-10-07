@@ -1,47 +1,42 @@
-/** @type {import('eslint').Linter.Config} */
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  root: true,
+  parser: "@typescript-eslint/parser",
   extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:tailwindcss/recommended',
-    'plugin:prettier/recommended',
-    'prettier'
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
   ],
-  plugins: ['simple-import-sort', 'prettier', '@typescript-eslint'],
+  plugins: ["@typescript-eslint", "simple-import-sort", "prettier"],
   rules: {
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
 
-    // Disable conflicting or unnecessary rules
-    'sort-imports': 'off',
-    'tailwindcss/no-custom-classname': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-require-imports': 'off',
+    // Disable conflicting rules
+    "sort-imports": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-require-imports": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "off",
 
-    // Simplify warnings (optional)
-    'tailwindcss/classnames-order': 'off',
-    'simple-import-sort/imports': [
-      'error',
+    // Import sorting
+    "simple-import-sort/imports": [
+      "error",
       {
         groups: [
-          ['^.+\\.s?css$'],
-          [
-            `^(${require('module').builtinModules.join('|')})(/|$)`,
-            '^react',
-            '^@?\\w'
-          ],
-          ['^components(/.*|$)'],
-          ['^lib(/.*|$)', '^hooks(/.*|$)'],
-          ['^\\.']
+          ["^react", "^@?\\w"],
+          ["^components(/.*|$)"],
+          ["^lib(/.*|$)", "^hooks(/.*|$)"],
+          ["^\\.\\./", "^\\./"],
+          ["^.+\\.s?css$"]
         ]
       }
     ]
   },
   settings: {
     tailwindcss: {
-      callees: ['cn'],
-      config: 'tailwind.config.js'
+      callees: ["cn"],
+      config: "tailwind.config.js"
     }
   }
 };
