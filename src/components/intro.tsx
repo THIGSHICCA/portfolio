@@ -68,7 +68,9 @@ export const Intro = () => {
           className="text-muted-foreground max-w-xl text-center"
         >
           Aspiring Software Engineer | AI & ML Enthusiast |{' '}
-          <span>BSc(Hons) Computer Science & Software Engineering Undergraduate</span>
+          <span>
+            BSc(Hons) Computer Science & Software Engineering Undergraduate
+          </span>
         </motion.p>
 
         {/* Buttons */}
@@ -77,7 +79,11 @@ export const Intro = () => {
           className="flex flex-wrap justify-center gap-2 mt-4"
         >
           {/* Contact Button */}
-          <Button asChild size="lg" className="hover:scale-105 transition-transform">
+          <Button
+            asChild
+            size="lg"
+            className="hover:scale-105 transition-transform"
+          >
             <Link href="#contact">
               Get in touch <Icons.arrowRight className="ml-2 size-4" />
             </Link>
@@ -96,7 +102,12 @@ export const Intro = () => {
           </Button>
 
           {/* LinkedIn */}
-          <Button variant="outline" size="icon" asChild className="hover:rotate-12 transition-transform">
+          <Button
+            variant="outline"
+            size="icon"
+            asChild
+            className="hover:rotate-12 transition-transform"
+          >
             <Link
               href="https://www.linkedin.com/in/thigshicca-vigneshwaramoorthy-a5aa7823a"
               target="_blank"
@@ -107,8 +118,17 @@ export const Intro = () => {
           </Button>
 
           {/* GitHub */}
-          <Button variant="outline" size="icon" asChild className="hover:rotate-12 transition-transform">
-            <Link href="https://github.com/THIGSHICCA" target="_blank" aria-label="Github">
+          <Button
+            variant="outline"
+            size="icon"
+            asChild
+            className="hover:rotate-12 transition-transform"
+          >
+            <Link
+              href="https://github.com/THIGSHICCA"
+              target="_blank"
+              aria-label="Github"
+            >
               <Icons.github className="size-5" />
             </Link>
           </Button>
