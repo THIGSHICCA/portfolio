@@ -11,9 +11,7 @@ module.exports = {
 
   // ✅ Better structured robots.txt options
   robotsTxtOptions: {
-    policies: [
-      { userAgent: '*', allow: '/' },
-    ],
+    policies: [{ userAgent: '*', allow: '/' }],
     additionalSitemaps: [
       `${process.env.SITE_URL || 'https://yourdomain.com'}/sitemap.xml`,
     ],

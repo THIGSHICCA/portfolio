@@ -46,7 +46,8 @@ export const projectsData = [
   {
     image: '/images/project6.jpg', // another mobile screenshot
     title: 'MediApp',
-    description: 'This application is a doctor booking platform and also it will suggest the doctors based on the symptoms you enter',
+    description:
+      'This application is a doctor booking platform and also it will suggest the doctors based on the symptoms you enter',
     technologies: ['React Native', 'Tailwind', 'Python'],
     width: 100,
     height: 400,
