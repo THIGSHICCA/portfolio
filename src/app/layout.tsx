@@ -1,14 +1,14 @@
 import '@/styles/globals.css';
 
-import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
+import type { Metadata } from 'next';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
-import { cn } from '@/lib/utils';
 import { fonts } from '@/lib/fonts';
 import { siteConfig } from '@/lib/site-config';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -44,4 +44,4 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default RootLayout;
+export default RootLayout;  
