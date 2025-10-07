@@ -88,7 +88,7 @@ export const Contact = () => {
             placeholder="hello@gmail.com"
             {...register('email')}
             className={cn(
-              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-opacity-40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600',
+              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600',
               errors.email?.message && 'border-red-500'
             )}
           />
@@ -113,7 +113,7 @@ export const Contact = () => {
             placeholder="Hello! What's up?"
             {...register('message')}
             className={cn(
-              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-opacity-40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600 resize-none h-48',
+              'rounded-md border border-gray-300 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-gray-400 focus:border-purple-500 focus:ring focus:ring-purple-300 focus:ring-purple-300/40 disabled:opacity-50 dark:bg-gray-800 dark:text-white dark:border-gray-600 resize-none h-48',
               errors.message?.message && 'border-red-500'
             )}
           />
